@@ -32,13 +32,13 @@ public class DanceBehaviour : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown("Right"))
+        if (Input.GetKeyDown(KeyCode.RightArrow))
             AddNewDanceMove(DanceMoves.Right);
-        else if (Input.GetKeyDown("Left"))
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
             AddNewDanceMove(DanceMoves.Left);
-        else if (Input.GetKeyDown("Up")) 
+        else if (Input.GetKeyDown(KeyCode.UpArrow)) 
             AddNewDanceMove(DanceMoves.Up);
-        else if (Input.GetKeyDown("Down"))
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
             AddNewDanceMove(DanceMoves.Down);
     }
     #endregion
