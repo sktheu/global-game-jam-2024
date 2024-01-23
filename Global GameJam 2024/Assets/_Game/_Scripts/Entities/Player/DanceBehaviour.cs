@@ -8,10 +8,13 @@ public class DanceBehaviour : MonoBehaviour
     // Unity Inspector:
     [SerializeField] private float stopDanceTime;
 
+    // Componentes:
+    private Animator _anim;
+
     public bool isDancing = false;
     private DanceMoves[] _curDanceMoves = new DanceMoves[4];
 
-    private enum DanceMoves
+    public enum DanceMoves
     {
         Right = 1,
         Left = 2,
@@ -21,7 +24,11 @@ public class DanceBehaviour : MonoBehaviour
     #endregion
 
     #region Funções Unity
-    private void Start() => ClearDance();
+    private void Start()
+    {
+        _anim = GetComponent<Animator>();
+        ClearDance();
+    }
 
     private void Update()
     {
@@ -60,6 +67,17 @@ public class DanceBehaviour : MonoBehaviour
     {
         for (int i = 0; i < _curDanceMoves.Length; i++)
             _curDanceMoves[i] = 0;
+    }
+
+    public bool VerifyDance(Dance targetDance)
+    {
+        for (int i = 0; i < _curDanceMoves.Length; i++)
+        {
+            if (_curDanceMoves[i] != targetDance.danceMoves[i])
+                return false;
+        }
+
+        return true;
     }
     #endregion
 }
