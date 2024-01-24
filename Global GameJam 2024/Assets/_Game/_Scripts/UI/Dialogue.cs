@@ -65,7 +65,7 @@ public class Dialogue : MonoBehaviour
 
         if (_started)
         {
-            if (Input.GetButtonDown("Action"))
+            if (Input.GetKeyDown(KeyCode.Space))
                 NextLine();
         }
     }
