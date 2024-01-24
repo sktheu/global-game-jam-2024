@@ -12,7 +12,7 @@ public class DanceBehaviour : MonoBehaviour
     private Animator _anim;
 
     public bool isDancing = false;
-    private DanceMoves[] _curDanceMoves = new DanceMoves[4];
+    private List<DanceMoves> _curDanceMoves = new List<DanceMoves>();
 
     public enum DanceMoves
     {
@@ -46,7 +46,7 @@ public class DanceBehaviour : MonoBehaviour
     #region Funções Próprias
     private void AddNewDanceMove(DanceMoves newMove)
     {
-        for (int i = 0; i < _curDanceMoves.Length; i++)
+        for (int i = 0; i < _curDanceMoves.Count; i++)
         {
             if (_curDanceMoves[i] == 0)
                 _curDanceMoves[i] = newMove;
@@ -65,13 +65,16 @@ public class DanceBehaviour : MonoBehaviour
 
     private void ClearDance()
     {
-        for (int i = 0; i < _curDanceMoves.Length; i++)
+        for (int i = 0; i < _curDanceMoves.Count; i++)
             _curDanceMoves[i] = 0;
     }
 
     public bool VerifyDance(Dance targetDance)
     {
-        for (int i = 0; i < _curDanceMoves.Length; i++)
+        if (_curDanceMoves.Count < targetDance.danceMoves.Length)
+            return false;
+
+        for (int i = 0; i < _curDanceMoves.Count; i++)
         {
             if (_curDanceMoves[i] != targetDance.danceMoves[i])
                 return false;
