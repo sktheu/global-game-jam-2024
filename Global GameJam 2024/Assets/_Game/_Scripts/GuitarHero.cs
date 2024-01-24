@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 public class GuitarHero : MonoBehaviour
 {
     public float speed = 6f;
+    [SerializeField] private bool greenArea = false;
 
 
     void Start()
@@ -26,4 +27,17 @@ public class GuitarHero : MonoBehaviour
         transform.position = actualPosition;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("entrou na área");
+        greenArea = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        greenArea = false;
+    }
+
 }
+
+
