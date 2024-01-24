@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!_danceBehaviour)
+        if (!_danceBehaviour.isDancing)
             _rb.MovePosition(_rb.position + moveInput * moveSpeed * Time.deltaTime);
         else
             _rb.velocity = Vector2.zero;
