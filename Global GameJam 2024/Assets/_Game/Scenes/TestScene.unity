@@ -379,7 +379,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d2be5dbe46c9364ba391f89f3f0008f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  speed: 3
+  id: 0
   greenArea: 0
 --- !u!61 &695391365
 BoxCollider2D:
@@ -697,7 +698,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1953184457
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -756,6 +757,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
+  id: 0
   greenArea: 0
 --- !u!212 &1953184459
 SpriteRenderer:

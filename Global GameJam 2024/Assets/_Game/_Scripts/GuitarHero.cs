@@ -8,8 +8,9 @@ public class GuitarHero : MonoBehaviour
 {
     #region Global Variables
     [SerializeField] public float speed = 6f;
+    [SerializeField] private int id;
     [SerializeField] private bool greenArea = false;
-    private int id;
+    private bool pressed = false;
 
     private SpriteRenderer _spr;
     #endregion
@@ -42,6 +43,9 @@ public class GuitarHero : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         greenArea = false;
+        //som de erro
+        if (!pressed)
+            Debug.Log("Saiu");
     }
 
     #endregion
@@ -55,15 +59,51 @@ public class GuitarHero : MonoBehaviour
         transform.position = actualPosition;
     }
 
-
+    /* Acrescentar pontos baseado se apertou a tecla certa
+     * Talvez ir reduzindo a opacidade do passo aos poucos
+     * Som de acerto e erro
+     */
     private void PressKey()
     {
-        if (greenArea && Input.GetKeyDown("space"))
+        if (greenArea)
         {
-            Destroy(gameObject);
-            /* Acrescentar pontos baseado se apertou a tecla certa
-             * Talvez ir reduzindo a opacidade do passo aos poucos
-             */
+            if (Input.GetKeyDown(KeyCode.LeftArrow) && id == 1)
+            {
+                //som de acerto
+                //somar pontos
+                Destroy(gameObject);  
+            }
+            else if (Input.GetKeyDown(KeyCode.UpArrow) && id == 2)
+            {
+                //som de acerto
+                //somar pontos
+                Destroy(gameObject);
+            }
+            else if (Input.GetKeyDown(KeyCode.RightArrow) && id == 3)
+            {
+                //som de acerto
+                //somar pontos
+                Destroy(gameObject);
+            }
+            else if (Input.GetKeyDown(KeyCode.DownArrow) && id == 4)
+            {
+                //som de acerto
+                //somar pontos
+                Destroy(gameObject);
+            }
+            else 
+            {
+                if (Input.GetKeyDown(KeyCode.LeftArrow)  || Input.GetKeyDown(KeyCode.UpArrow) ||
+                    Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.DownArrow))
+                {
+                    //som de derrota
+                    //destruir
+                    Debug.Log("Errou");
+                    pressed = true;
+                    pressed = false;
+                }
+            }
+
         }
 
     }
