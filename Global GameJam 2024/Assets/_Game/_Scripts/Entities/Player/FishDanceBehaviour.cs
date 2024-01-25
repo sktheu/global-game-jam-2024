@@ -2,25 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DanceBehaviour : MonoBehaviour
+public class FishDanceBehaviour : MonoBehaviour
 {
     #region Variáveis Globais
     // Unity Inspector:
     [SerializeField] private float stopDanceTime;
+    [SerializeField] private List<Dance.Moves> targetDanceMoves = new List<Dance.Moves>();
 
     // Componentes:
     private Animator _anim;
 
-    public bool isDancing = false;
-    private List<DanceMoves> _curDanceMoves = new List<DanceMoves>();
-
-    public enum DanceMoves
-    {
-        Right = 1,
-        Left = 2,
-        Up = 3,
-        Down = 4
-    }
+    private List<Dance.Moves> _curDanceMoves = new List<Dance.Moves>();
     #endregion
 
     #region Funções Unity
@@ -33,54 +25,54 @@ public class DanceBehaviour : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.RightArrow))
-            AddNewDanceMove(DanceMoves.Right);
+            AddNewDanceMove(Dance.Moves.Right);
         else if (Input.GetKeyDown(KeyCode.LeftArrow))
-            AddNewDanceMove(DanceMoves.Left);
+            AddNewDanceMove(Dance.Moves.Left);
         else if (Input.GetKeyDown(KeyCode.UpArrow)) 
-            AddNewDanceMove(DanceMoves.Up);
+            AddNewDanceMove(Dance.Moves.Up);
         else if (Input.GetKeyDown(KeyCode.DownArrow))
-            AddNewDanceMove(DanceMoves.Down);
+            AddNewDanceMove(Dance.Moves.Down);
     }
     #endregion
 
     #region Funções Próprias
-    private void AddNewDanceMove(DanceMoves newMove)
+    private void AddNewDanceMove(Dance.Moves newMove)
     {
         for (int i = 0; i < _curDanceMoves.Count; i++)
         {
-            if (_curDanceMoves[i] == 0)
+            if (_curDanceMoves[i] == Dance.Moves.Empty)
                 _curDanceMoves[i] = newMove;
         }
 
-        isDancing = true;
         StartCoroutine(StopDanceInterval(stopDanceTime));
+
+        if (_curDanceMoves.Count == targetDanceMoves.Count)
+            VerifyDance();
     }
     
     private IEnumerator StopDanceInterval(float t)
     {
         yield return new WaitForSeconds(t);
         ClearDance();
-        isDancing = false;
     }
 
     private void ClearDance()
     {
         for (int i = 0; i < _curDanceMoves.Count; i++)
-            _curDanceMoves[i] = 0;
+            _curDanceMoves[i] = Dance.Moves.Empty;
     }
 
-    public bool VerifyDance(Dance targetDance)
+    private bool VerifyDance()
     {
-        if (_curDanceMoves.Count < targetDance.danceMoves.Length)
-            return false;
-
         for (int i = 0; i < _curDanceMoves.Count; i++)
         {
-            if (_curDanceMoves[i] != targetDance.danceMoves[i])
+            if (_curDanceMoves[i] != targetDanceMoves[i])
                 return false;
         }
 
         return true;
+
+        //TODO: Concluir e Reiniciar
     }
     #endregion
 }
