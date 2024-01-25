@@ -13,9 +13,6 @@ public class PlayerMovement : MonoBehaviour
     private Animator _anim;
     private SpriteRenderer _spr;
 
-    // References
-    private DanceBehaviour _danceBehaviour;
-
     Vector2 moveInput;
     #endregion
 
@@ -25,28 +22,18 @@ public class PlayerMovement : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
         _anim = GetComponent<Animator>();
         _spr = GetComponent<SpriteRenderer>();
-        _danceBehaviour = GetComponent<DanceBehaviour>();
     }
 
     private void Update()
     {
-        if (!_danceBehaviour.isDancing)
-        {
-            moveInput.x = Input.GetAxisRaw("Horizontal");
-            moveInput.y = Input.GetAxisRaw("Vertical");
-            moveInput.Normalize();
+        moveInput.x = Input.GetAxisRaw("Horizontal");
+        moveInput.y = Input.GetAxisRaw("Vertical");
+        moveInput.Normalize();
 
-            FlipX();
-        }
+        FlipX();
     }
 
-    private void FixedUpdate()
-    {
-        if (!_danceBehaviour.isDancing)
-            _rb.MovePosition(_rb.position + moveInput * moveSpeed * Time.deltaTime);
-        else
-            _rb.velocity = Vector2.zero;
-    }
+    private void FixedUpdate() => _rb.MovePosition(_rb.position + moveInput * moveSpeed * Time.deltaTime);
 
     private void FlipX()
     {
