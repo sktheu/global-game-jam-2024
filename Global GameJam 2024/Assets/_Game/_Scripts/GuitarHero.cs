@@ -10,6 +10,7 @@ public class GuitarHero : MonoBehaviour
     [SerializeField] public float speed = 6f;
     [SerializeField] private int id;
     [SerializeField] private bool greenArea = false;
+    private int points;
     private bool pressed = false;
 
     private SpriteRenderer _spr;
@@ -70,26 +71,34 @@ public class GuitarHero : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.LeftArrow) && id == 1)
             {
                 //som de acerto
-                //somar pontos
-                Destroy(gameObject);  
+                points++;
+                pressed = true;
+                Destroy(gameObject);
+                
             }
             else if (Input.GetKeyDown(KeyCode.UpArrow) && id == 2)
             {
                 //som de acerto
-                //somar pontos
+                points++;
+                pressed = true;
                 Destroy(gameObject);
+                
             }
             else if (Input.GetKeyDown(KeyCode.RightArrow) && id == 3)
             {
                 //som de acerto
-                //somar pontos
+                points++;
+                pressed = true;
                 Destroy(gameObject);
+                
             }
             else if (Input.GetKeyDown(KeyCode.DownArrow) && id == 4)
             {
                 //som de acerto
-                //somar pontos
+                points++;
+                pressed = true;
                 Destroy(gameObject);
+                
             }
             else 
             {
@@ -100,7 +109,6 @@ public class GuitarHero : MonoBehaviour
                     //destruir
                     Debug.Log("Errou");
                     pressed = true;
-                    pressed = false;
                 }
             }
 
