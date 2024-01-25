@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -11,8 +12,13 @@ public class GuitarHero : MonoBehaviour
 
     void Start()
     {
-        
 
+
+    }
+
+    private void Update()
+    {
+        PressKey();
     }
 
     private void FixedUpdate()
@@ -29,13 +35,24 @@ public class GuitarHero : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("entrou na área");
         greenArea = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         greenArea = false;
+    }
+
+    private void PressKey()
+    {
+        if (greenArea && Input.GetKeyDown("space"))
+        {
+            Destroy(gameObject);
+            /* Acrescentar pontos baseado se apertou a tecla certa
+             * Talvez ir reduzindo a opacidade aos poucos do passo
+             */
+        }
+
     }
 
 }
