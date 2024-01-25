@@ -2,8 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dance : MonoBehaviour
+[CreateAssetMenu(fileName = "New Dance", menuName = "Scriptable Objects/Dance")]
+public class Dance : ScriptableObject
 {
+    #region Variáveis Globais
+    public List<Moves> DanceMoves = new List<Moves>();
+
     public enum Moves
     {
         Empty,
@@ -12,4 +16,5 @@ public class Dance : MonoBehaviour
         Up,
         Down
     }
+    #endregion
 }
