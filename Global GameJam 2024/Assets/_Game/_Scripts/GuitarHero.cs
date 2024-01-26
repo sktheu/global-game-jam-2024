@@ -14,12 +14,14 @@ public class GuitarHero : MonoBehaviour
     private bool pressed = false;
 
     private SpriteRenderer _spr;
+    private BoxCollider2D _boxCol;
     #endregion
 
     #region Unity Functions
     void Start()
     {
         _spr = GetComponent<SpriteRenderer>();
+        _boxCol = GetComponent<BoxCollider2D>();
 
         //1 = Esquerda, 2 = Cima, 3 = Direita, 4 = Baixo
         id = Random.Range(1, 4);
@@ -39,14 +41,27 @@ public class GuitarHero : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         greenArea = true;
+        _boxCol.offset = new Vector2(-0.23f, 0f);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         greenArea = false;
-        //som de erro
-        if (!pressed)
-            Debug.Log("Saiu");
+
+        if (collision.CompareTag("AreaAcerto"))
+        {
+            if (!pressed)
+            {
+                //som de erro
+                Debug.Log("Saiu");
+            }
+        }
+
+        if(collision.CompareTag("DeleteArea"))
+        {
+            Destroy(gameObject);
+            Debug.Log("Destruído");
+        }
     }
 
     #endregion
