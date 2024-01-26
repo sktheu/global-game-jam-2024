@@ -8,7 +8,9 @@ public class Spawner : MonoBehaviour
     private int spawnTime;
     public int maxSpawnTime;
     public int minSpawnTime;
-    public float limitTime = 5.0f;
+
+    //Tempo que vai ficar lançando as danças
+    public float limitTime = 20f;
     private float startTime;
     public bool spawnerSwitch = true;
 
