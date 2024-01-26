@@ -75,10 +75,6 @@ public class GuitarHero : MonoBehaviour
         transform.position = actualPosition;
     }
 
-    /* Acrescentar pontos baseado se apertou a tecla certa
-     * Talvez ir reduzindo a opacidade do passo aos poucos
-     * Som de acerto e erro
-     */
     private void PressKey()
     {
         if (greenArea)
