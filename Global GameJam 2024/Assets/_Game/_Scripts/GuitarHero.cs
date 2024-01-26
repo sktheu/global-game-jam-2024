@@ -7,11 +7,17 @@ using UnityEngine.UIElements;
 public class GuitarHero : MonoBehaviour
 {
     #region Global Variables
+
     [SerializeField] public float speed = 6f;
     [SerializeField] private int id;
     [SerializeField] private bool greenArea = false;
-    private int points;
     private bool pressed = false;
+    private int points;
+
+    //public Sprite leftMove
+    //public Sprite upMove
+    //public Sprite rightMove
+    //public Sprite downMove
 
     private SpriteRenderer _spr;
     private BoxCollider2D _boxCol;
@@ -82,6 +88,7 @@ public class GuitarHero : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.LeftArrow) && id == 1)
             {
                 //som de acerto
+                //_spr.sprite = leftMove;
                 points++;
                 pressed = true;
                 Destroy(gameObject);
@@ -90,6 +97,7 @@ public class GuitarHero : MonoBehaviour
             else if (Input.GetKeyDown(KeyCode.UpArrow) && id == 2)
             {
                 //som de acerto
+                //_spr.sprite = upMove;
                 points++;
                 pressed = true;
                 Destroy(gameObject);
@@ -98,6 +106,7 @@ public class GuitarHero : MonoBehaviour
             else if (Input.GetKeyDown(KeyCode.RightArrow) && id == 3)
             {
                 //som de acerto
+                //_spr.sprite = rightMove;
                 points++;
                 pressed = true;
                 Destroy(gameObject);
@@ -106,6 +115,7 @@ public class GuitarHero : MonoBehaviour
             else if (Input.GetKeyDown(KeyCode.DownArrow) && id == 4)
             {
                 //som de acerto
+                //_spr.sprite = downMove;
                 points++;
                 pressed = true;
                 Destroy(gameObject);
@@ -117,6 +127,7 @@ public class GuitarHero : MonoBehaviour
                     Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.DownArrow))
                 {
                     //som de derrota
+                    //mudar sprite sapa triste (se tiver)
                     //destruir
                     Debug.Log("Errou");
                     pressed = true;
@@ -134,6 +145,7 @@ public class GuitarHero : MonoBehaviour
         {
             case 1:
                 //_spr.sprite = dançaesquerda;
+                //Ou seta
                 break;
             case 2:
                 //cima
