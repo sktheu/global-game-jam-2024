@@ -5,15 +5,28 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public GameObject danceMove;
-    public float spawnTime = 1.0f;
+    public int spawnTime;
+    public int maxSpawnTime;
+    public int minSpawnTime;
 
     void Start()
     {
-        InvokeRepeating("SpawnObject", 2f, spawnTime);
+        StartCoroutine(SpawnObjectsCoroutine());
+    }
+
+    IEnumerator SpawnObjectsCoroutine()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(spawnTime);
+
+            SpawnObject();
+        }
     }
 
     void SpawnObject()
     {
         Instantiate(danceMove, transform.position, Quaternion.identity);
+        spawnTime = Random.Range(minSpawnTime, maxSpawnTime);
     }
 }
