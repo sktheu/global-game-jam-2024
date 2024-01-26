@@ -5,23 +5,37 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public GameObject danceMove;
-    public int spawnTime;
+    private int spawnTime;
     public int maxSpawnTime;
     public int minSpawnTime;
+    public float limitTime = 5.0f;
+    private float startTime;
+    public bool spawnerSwitch = true;
 
     void Start()
     {
+        startTime = Time.time;
         StartCoroutine(SpawnObjectsCoroutine());
+    }
+
+    private void Update()
+    {
+        if (Time.time - startTime >= limitTime)
+        {
+            //Para o funcionamento do spawner
+            spawnerSwitch = false;    
+        }
     }
 
     IEnumerator SpawnObjectsCoroutine()
     {
-        while (true)
+        while (spawnerSwitch == true)
         {
             yield return new WaitForSeconds(spawnTime);
 
             SpawnObject();
         }
+        Debug.Log("Acabou Minigame");
     }
 
     void SpawnObject()
