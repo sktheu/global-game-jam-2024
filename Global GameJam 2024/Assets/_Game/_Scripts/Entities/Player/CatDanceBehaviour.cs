@@ -6,11 +6,16 @@ public class CatDanceBehaviour : MonoBehaviour
 {
     #region Variáveis Globais
     // Unity Inspector:
+    [Header("Configurações:")]
     [SerializeField] private float minDanceInterval;
     [SerializeField] private float maxDanceInterval;
     [SerializeField] private Dance[] possibleDances = new Dance[4];
     [SerializeField] private List<Dance.Moves> curTargetDanceMoves = new List<Dance.Moves>();
     [SerializeField] private int maxCompletedDancesCount;
+
+    [Header("Diálogos:")] 
+    [SerializeField] private Dialogue initialDialogue;
+    [SerializeField] private Dialogue winDialogue;
 
     // Componentes:
     private Animator _anim;
@@ -19,11 +24,19 @@ public class CatDanceBehaviour : MonoBehaviour
     private List<Dance.Moves> _curDanceMoves = new List<Dance.Moves>();
 
     private int _curCompletedDancesCount = 0;
+
+    private static bool _win = false;
     #endregion
 
     #region Funções Unity
     private void Start()
     {
+        if (_win)
+        {
+            winDialogue.enabled = true;
+            this.enabled = false;
+        }
+
         _anim = GetComponent<Animator>();
         _playerMovement = GetComponent<PlayerMovement>();
         _playerMovement.enabled = false;
@@ -104,11 +117,14 @@ public class CatDanceBehaviour : MonoBehaviour
     {
         _playerMovement.enabled = true;
         this.enabled = false;
+        initialDialogue.enabled = true;
     }
 
     private void CompleteDance()
     {
         _playerMovement.enabled = true;
+        winDialogue.enabled = true;
+        _win = true;
     }
     #endregion
 }

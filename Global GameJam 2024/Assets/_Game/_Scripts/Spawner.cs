@@ -4,18 +4,35 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
+    #region Global Variables
+    [Header("Configurações:")]
     public GameObject danceMove;
     private int spawnTime;
     public int maxSpawnTime;
     public int minSpawnTime;
+    [SerializeField] private int targetPoints;
+
+    [Header("Diálogos:")]
+    [SerializeField] private Dialogue initialDialogue;
+    [SerializeField] private Dialogue winDialogue;
 
     //Tempo que vai ficar lançando as danças
     public float limitTime = 20f;
     private float startTime;
     public bool spawnerSwitch = true;
 
-    void Start()
+    private static bool _win = false;
+    #endregion
+
+    #region Unity Functions
+    private void Start()
     {
+        if (_win)
+        {
+            winDialogue.enabled = true;
+            this.enabled = false;
+        }
+
         startTime = Time.time;
         StartCoroutine(SpawnObjectsCoroutine());
     }
@@ -25,11 +42,13 @@ public class Spawner : MonoBehaviour
         if (Time.time - startTime >= limitTime)
         {
             //Para o funcionamento do spawner
-            spawnerSwitch = false;    
+            spawnerSwitch = false;
         }
     }
+    #endregion
 
-    IEnumerator SpawnObjectsCoroutine()
+    #region Custom Functions
+    private IEnumerator SpawnObjectsCoroutine()
     {
         while (spawnerSwitch == true)
         {
@@ -38,11 +57,24 @@ public class Spawner : MonoBehaviour
             SpawnObject();
         }
         Debug.Log("Acabou Minigame");
+
+        if (GuitarHero.CurrentPoints >= targetPoints)
+        {
+            winDialogue.enabled = true;
+            this.enabled = false;
+        }
+        else
+        {
+            initialDialogue.enabled = true;
+            this.enabled = false;
+            GuitarHero.CurrentPoints = 0;
+        }
     }
 
-    void SpawnObject()
+    private void SpawnObject()
     {
         Instantiate(danceMove, transform.position, Quaternion.identity);
         spawnTime = Random.Range(minSpawnTime, maxSpawnTime);
     }
+    #endregion
 }

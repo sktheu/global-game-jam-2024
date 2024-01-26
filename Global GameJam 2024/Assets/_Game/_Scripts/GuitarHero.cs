@@ -7,12 +7,13 @@ using UnityEngine.UIElements;
 public class GuitarHero : MonoBehaviour
 {
     #region Global Variables
-
+    [Header("Configurações:")]
     [SerializeField] public float speed = 6f;
     [SerializeField] private int id;
     [SerializeField] private bool greenArea = false;
-    private bool pressed = false;
-    private int points;
+
+    private bool _pressed = false;
+    public static int CurrentPoints;
 
     //public Sprite leftMove
     //public Sprite upMove
@@ -24,7 +25,7 @@ public class GuitarHero : MonoBehaviour
     #endregion
 
     #region Unity Functions
-    void Start()
+    private void Start()
     {
         _spr = GetComponent<SpriteRenderer>();
         _boxCol = GetComponent<BoxCollider2D>();
@@ -56,7 +57,7 @@ public class GuitarHero : MonoBehaviour
 
         if (collision.CompareTag("AreaAcerto"))
         {
-            if (!pressed)
+            if (!_pressed)
             {
                 //som de erro
                 Debug.Log("Saiu");
@@ -89,8 +90,8 @@ public class GuitarHero : MonoBehaviour
             {
                 //som de acerto
                 //_spr.sprite = leftMove;
-                points++;
-                pressed = true;
+                CurrentPoints++;
+                _pressed = true;
                 Destroy(gameObject);
                 
             }
@@ -98,8 +99,8 @@ public class GuitarHero : MonoBehaviour
             {
                 //som de acerto
                 //_spr.sprite = upMove;
-                points++;
-                pressed = true;
+                CurrentPoints++;
+                _pressed = true;
                 Destroy(gameObject);
                 
             }
@@ -107,8 +108,8 @@ public class GuitarHero : MonoBehaviour
             {
                 //som de acerto
                 //_spr.sprite = rightMove;
-                points++;
-                pressed = true;
+                CurrentPoints++;
+                _pressed = true;
                 Destroy(gameObject);
                 
             }
@@ -116,8 +117,8 @@ public class GuitarHero : MonoBehaviour
             {
                 //som de acerto
                 //_spr.sprite = downMove;
-                points++;
-                pressed = true;
+                CurrentPoints++;
+                _pressed = true;
                 Destroy(gameObject);
                 
             }
@@ -130,7 +131,7 @@ public class GuitarHero : MonoBehaviour
                     //mudar sprite sapa triste (se tiver)
                     //destruir
                     Debug.Log("Errou");
-                    pressed = true;
+                    _pressed = true;
                 }
             }
 

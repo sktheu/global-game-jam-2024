@@ -6,19 +6,32 @@ public class FishDanceBehaviour : MonoBehaviour
 {
     #region Variáveis Globais
     // Unity Inspector:
+    [Header("Configurações:")]
     [SerializeField] private float stopDanceTime;
     [SerializeField] private List<Dance.Moves> targetDanceMoves = new List<Dance.Moves>();
+
+    [Header("Diálogos:")] 
+    [SerializeField] private Dialogue initialDialogue;
+    [SerializeField] private Dialogue winDialogue;
 
     // Componentes:
     private Animator _anim;
     private PlayerMovement _playerMovement;
 
     private List<Dance.Moves> _curDanceMoves = new List<Dance.Moves>();
+
+    private static bool _win = false;
     #endregion
 
     #region Funções Unity
     private void Start()
     {
+        if (_win)
+        {
+            winDialogue.enabled = true;
+            this.enabled = false;
+        }
+
         _anim = GetComponent<Animator>();
         _playerMovement = GetComponent<PlayerMovement>();
         _playerMovement.enabled = false;
@@ -85,11 +98,13 @@ public class FishDanceBehaviour : MonoBehaviour
     {
         _playerMovement.enabled = true;
         this.enabled = false;
+        initialDialogue.enabled = true;
     }
 
     private void CompleteDance()
     {
         _playerMovement.enabled = true;
+        winDialogue.enabled = true;
     }
     #endregion
 }
