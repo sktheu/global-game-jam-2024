@@ -21,13 +21,13 @@ public class GuitarHero : MonoBehaviour
     public Sprite rightMove;
     public Sprite downMove;
 
-    [Header("Sfx")]
-    public AudioClip rightSfx, wrongSfx;
+    //[Header("Sfx")]
+    //public AudioClip rightSfx, wrongSfx;
 
     //Components
     private SpriteRenderer _spr;
     private BoxCollider2D _boxCol;
-    private AudioSource _src;
+    //private AudioSource _src;
     #endregion
 
     #region Unity Functions
@@ -35,7 +35,7 @@ public class GuitarHero : MonoBehaviour
     {
         _spr = GetComponent<SpriteRenderer>();
         _boxCol = GetComponent<BoxCollider2D>();
-        _src = GetComponent<AudioSource>();
+        //_src = GetComponent<AudioSource>();
 
         //1 = Esquerda, 2 = Cima, 3 = Direita, 4 = Baixo
         id = Random.Range(1, 4);
@@ -96,8 +96,8 @@ public class GuitarHero : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.LeftArrow) && id == 1)
             {
-                _src.clip = rightSfx;
-                _src.Play();
+                //_src.clip = rightSfx;
+                //_src.Play();
 
                 _spr.sprite = leftMove;
                 CurrentPoints++;
@@ -107,8 +107,8 @@ public class GuitarHero : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.UpArrow) && id == 2)
             {
-                _src.clip = rightSfx;
-                _src.Play();
+                //_src.clip = rightSfx;
+                //_src.Play();
 
                 _spr.sprite = upMove;
                 CurrentPoints++;
@@ -118,8 +118,8 @@ public class GuitarHero : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.RightArrow) && id == 3)
             {
-                _src.clip = rightSfx;
-                _src.Play();
+                //_src.clip = rightSfx;
+                //_src.Play();
 
                 _spr.sprite = rightMove;
                 CurrentPoints++;
@@ -129,8 +129,8 @@ public class GuitarHero : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.DownArrow) && id == 4)
             {
-                _src.clip = rightSfx;
-                _src.Play();
+                //_src.clip = rightSfx;
+                //_src.Play();
 
                 _spr.sprite = downMove;
                 CurrentPoints++;
