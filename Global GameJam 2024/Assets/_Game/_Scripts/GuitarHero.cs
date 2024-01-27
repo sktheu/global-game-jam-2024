@@ -15,13 +15,19 @@ public class GuitarHero : MonoBehaviour
     private bool _pressed = false;
     public static int CurrentPoints;
 
-    //public Sprite leftMove
-    //public Sprite upMove
-    //public Sprite rightMove
-    //public Sprite downMove
+    [Header("Sprites")]
+    public Sprite leftMove;
+    public Sprite upMove;
+    public Sprite rightMove;
+    public Sprite downMove;
 
+    [Header("Sfx")]
+    public AudioClip rightSfx, wrongSfx;
+
+    //Components
     private SpriteRenderer _spr;
     private BoxCollider2D _boxCol;
+    private AudioSource _src;
     #endregion
 
     #region Unity Functions
@@ -29,6 +35,7 @@ public class GuitarHero : MonoBehaviour
     {
         _spr = GetComponent<SpriteRenderer>();
         _boxCol = GetComponent<BoxCollider2D>();
+        _src = GetComponent<AudioSource>();
 
         //1 = Esquerda, 2 = Cima, 3 = Direita, 4 = Baixo
         id = Random.Range(1, 4);
@@ -59,7 +66,8 @@ public class GuitarHero : MonoBehaviour
         {
             if (!_pressed)
             {
-                //som de erro
+                //_src.clip = wrongSfx;
+                //_src.Play();
                 Debug.Log("Saiu");
             }
         }
@@ -88,8 +96,10 @@ public class GuitarHero : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.LeftArrow) && id == 1)
             {
-                //som de acerto
-                //_spr.sprite = leftMove;
+                _src.clip = rightSfx;
+                _src.Play();
+
+                _spr.sprite = leftMove;
                 CurrentPoints++;
                 _pressed = true;
                 Destroy(gameObject);
@@ -97,8 +107,10 @@ public class GuitarHero : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.UpArrow) && id == 2)
             {
-                //som de acerto
-                //_spr.sprite = upMove;
+                _src.clip = rightSfx;
+                _src.Play();
+
+                _spr.sprite = upMove;
                 CurrentPoints++;
                 _pressed = true;
                 Destroy(gameObject);
@@ -106,8 +118,10 @@ public class GuitarHero : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.RightArrow) && id == 3)
             {
-                //som de acerto
-                //_spr.sprite = rightMove;
+                _src.clip = rightSfx;
+                _src.Play();
+
+                _spr.sprite = rightMove;
                 CurrentPoints++;
                 _pressed = true;
                 Destroy(gameObject);
@@ -115,8 +129,10 @@ public class GuitarHero : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.DownArrow) && id == 4)
             {
-                //som de acerto
-                //_spr.sprite = downMove;
+                _src.clip = rightSfx;
+                _src.Play();
+
+                _spr.sprite = downMove;
                 CurrentPoints++;
                 _pressed = true;
                 Destroy(gameObject);
@@ -127,7 +143,8 @@ public class GuitarHero : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.LeftArrow)  || Input.GetKeyDown(KeyCode.UpArrow) ||
                     Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.DownArrow))
                 {
-                    //som de derrota
+                    //_src.clip = wrongSfx;
+                    //_src.Play();
                     //mudar sprite sapa triste (se tiver)
                     //destruir
                     Debug.Log("Errou");
@@ -145,17 +162,16 @@ public class GuitarHero : MonoBehaviour
         switch (id)
         {
             case 1:
-                //_spr.sprite = dançaesquerda;
-                //Ou seta
+                _spr.sprite = leftMove;
                 break;
             case 2:
-                //cima
+                _spr.sprite = upMove;
                 break;
             case 3:
-                //direita
+                _spr.sprite = rightMove;
                 break;
             default:
-                //baixo
+                _spr.sprite = downMove;
                 break;
         }
     }
