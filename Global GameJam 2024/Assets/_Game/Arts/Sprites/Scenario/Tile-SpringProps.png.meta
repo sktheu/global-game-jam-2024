@@ -1,0 +1,457 @@
+fileFormatVersion: 2
+guid: 5d9fd65622359a543a2249adc1822f3e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tile-SpringProps_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 37
+        width: 38
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4927374, y: 0.11700611}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a623c25eddf33574e849977b77570bcd
+      internalID: -1257179282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile-SpringProps_1
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 37
+        width: 38
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4927374, y: 0.12263847}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f4367452dd1ebd438d662ee5c702f21
+      internalID: 893363941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile-SpringProps_2
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 37
+        width: 38
+        height: 49
+      alignment: 9
+      pivot: {x: 0.5000006, y: 0.11700618}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd50499438fb9ca449e362ebc935a8fc
+      internalID: -1135738840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile-SpringProps_3
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 37
+        width: 35
+        height: 46
+      alignment: 9
+      pivot: {x: 0.45268902, y: 0.14602445}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0878a8bd4309b78469c193cba1810f71
+      internalID: 463922192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile-SpringProps_4
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 4
+        width: 26
+        height: 23
+      alignment: 9
+      pivot: {x: 0.50000006, y: 0.45200336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49d1c74fda42f934b8ec55ce2b9888e1
+      internalID: -1694668748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile-SpringProps_5
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 4
+        width: 26
+        height: 23
+      alignment: 9
+      pivot: {x: 0.47877076, y: 0.4880009}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fd0f304e59d37d46a8d628fd7b5f8f7
+      internalID: -543736761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile-SpringProps_6
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 4
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c07d5f319339fe344a5baf478286de61
+      internalID: -595270871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile-SpringProps_7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 16
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0.53449774, y: 0.32751215}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcce10acced3e964ea08ad3df1e0d83a
+      internalID: -1926672330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile-SpringProps_8
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 16
+        width: 21
+        height: 16
+      alignment: 9
+      pivot: {x: 0.44743276, y: 0.36200976}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b8681319a1304e49a22e40ef23360a4
+      internalID: -1195305287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile-SpringProps_9
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 19
+        width: 12
+        height: 11
+      alignment: 9
+      pivot: {x: 0.47700247, y: 0.22401914}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a65a5ef6d768bc4195ccb6f347694f0
+      internalID: -1127756229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile-SpringProps_10
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 18
+        width: 10
+        height: 9
+      alignment: 9
+      pivot: {x: 0.5551971, y: 0.16269048}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1d3be469483df448839f5a3d0f5f7bf
+      internalID: 903831782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile-SpringProps_11
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 18
+        width: 11
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5000014, y: 0.08602873}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 640fb1dbfebc5b6458a9e1c75bb0887c
+      internalID: 777145725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile-SpringProps_12
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 2
+        width: 8
+        height: 7
+      alignment: 9
+      pivot: {x: 0.5, y: 0.26344484}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16da7f9867f4e6642b029cbce5842101
+      internalID: 1071769175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile-SpringProps_13
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 2
+        width: 11
+        height: 11
+      alignment: 9
+      pivot: {x: 0.5000007, y: 0.14875174}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eae544ed63a38bc4b86b8e8ddae87191
+      internalID: -1514851134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile-SpringProps_14
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 3
+        width: 9
+        height: 7
+      alignment: 9
+      pivot: {x: 0.53066677, y: 0.22401926}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fa077afc2e69764380a39ace36d78db
+      internalID: -1635121928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Tile-SpringProps_0: -1257179282
+      Tile-SpringProps_1: 893363941
+      Tile-SpringProps_10: 903831782
+      Tile-SpringProps_11: 777145725
+      Tile-SpringProps_12: 1071769175
+      Tile-SpringProps_13: -1514851134
+      Tile-SpringProps_14: -1635121928
+      Tile-SpringProps_2: -1135738840
+      Tile-SpringProps_3: 463922192
+      Tile-SpringProps_4: -1694668748
+      Tile-SpringProps_5: -543736761
+      Tile-SpringProps_6: -595270871
+      Tile-SpringProps_7: -1926672330
+      Tile-SpringProps_8: -1195305287
+      Tile-SpringProps_9: -1127756229
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

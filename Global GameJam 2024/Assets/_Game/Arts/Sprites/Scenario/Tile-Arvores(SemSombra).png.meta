@@ -1,0 +1,457 @@
+fileFormatVersion: 2
+guid: fe0204a02a4960146b04abad007ff809
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tile-Arvores(SemSombra)_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 39
+        width: 38
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.085193306}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38090782fb1d63b46a4e66abd57c17eb
+      internalID: -1814289189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile-Arvores(SemSombra)_1
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 39
+        width: 38
+        height: 47
+      alignment: 9
+      pivot: {x: 0.480011, y: 0.09596755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99c14a38ecd9bf14c984e391bb5cfd84
+      internalID: -835223092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile-Arvores(SemSombra)_2
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 39
+        width: 38
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09058047}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55eebf1f7abcc7a4794758364b61c1bd
+      internalID: 1739599969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile-Arvores(SemSombra)_3
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 39
+        width: 35
+        height: 44
+      alignment: 9
+      pivot: {x: 0.44936132, y: 0.10870066}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aa008fa881875644ab40e595c809ffa
+      internalID: -473295492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile-Arvores(SemSombra)_4
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 5
+        width: 26
+        height: 22
+      alignment: 9
+      pivot: {x: 0.49026173, y: 0.32736787}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb007503271ca6b48bdc9a455e6f6190
+      internalID: -1834193004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile-Arvores(SemSombra)_5
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 5
+        width: 26
+        height: 22
+      alignment: 9
+      pivot: {x: 0.48052362, y: 0.35038546}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edc2cf23def5bf244ad6ad70e4870b4b
+      internalID: -1123749695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile-Arvores(SemSombra)_6
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 5
+        width: 26
+        height: 22
+      alignment: 9
+      pivot: {x: 0.48052362, y: 0.39642066}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba65758189eb4a248bf4a99ec6ae2b6a
+      internalID: 1744420667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile-Arvores(SemSombra)_7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 17
+        width: 16
+        height: 15
+      alignment: 9
+      pivot: {x: 0.5, y: 0.28056514}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92ac6176ddd5d734382c1f81aaedaf6b
+      internalID: 564304133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile-Arvores(SemSombra)_8
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 19
+        width: 21
+        height: 13
+      alignment: 9
+      pivot: {x: 0.45177278, y: 0.34418824}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61a5addb726a84b4ca51e3d172d83645
+      internalID: -665014382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile-Arvores(SemSombra)_9
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 19
+        width: 12
+        height: 11
+      alignment: 9
+      pivot: {x: 0.5, y: 0.20077063}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 331b4204a35371f4fac79f266e15ad94
+      internalID: 451603912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile-Arvores(SemSombra)_10
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 18
+        width: 10
+        height: 9
+      alignment: 9
+      pivot: {x: 0.5253189, y: 0.19054095}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f84207f9a70bf6845a7996e06cf7e220
+      internalID: -1641082746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile-Arvores(SemSombra)_11
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 18
+        width: 11
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16240835}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 756c05f04b09ccd47bdb261bd2721d1b
+      internalID: -449006407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile-Arvores(SemSombra)_12
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 4
+        width: 8
+        height: 5
+      alignment: 9
+      pivot: {x: 0.4683504, y: 0.19616719}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea9924b1cb2820f4d879b8096e1bffdd
+      internalID: -540309435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile-Arvores(SemSombra)_13
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 4
+        width: 11
+        height: 9
+      alignment: 9
+      pivot: {x: 0.54603505, y: 0.16240782}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d61e897d67e9d5746ac051730dc84b35
+      internalID: -85545215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile-Arvores(SemSombra)_14
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 5
+        width: 9
+        height: 5
+      alignment: 9
+      pivot: {x: 0.5, y: 0.297445}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e66a0a2b1a3ab1e4f98c69db483260b7
+      internalID: 1968576320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Tile-Arvores(SemSombra)_0: -1814289189
+      Tile-Arvores(SemSombra)_1: -835223092
+      Tile-Arvores(SemSombra)_10: -1641082746
+      Tile-Arvores(SemSombra)_11: -449006407
+      Tile-Arvores(SemSombra)_12: -540309435
+      Tile-Arvores(SemSombra)_13: -85545215
+      Tile-Arvores(SemSombra)_14: 1968576320
+      Tile-Arvores(SemSombra)_2: 1739599969
+      Tile-Arvores(SemSombra)_3: -473295492
+      Tile-Arvores(SemSombra)_4: -1834193004
+      Tile-Arvores(SemSombra)_5: -1123749695
+      Tile-Arvores(SemSombra)_6: 1744420667
+      Tile-Arvores(SemSombra)_7: 564304133
+      Tile-Arvores(SemSombra)_8: -665014382
+      Tile-Arvores(SemSombra)_9: 451603912
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
