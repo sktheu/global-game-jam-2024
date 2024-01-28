@@ -5,6 +5,6 @@ using UnityEngine;
 public class CollisionLayersManager : MonoBehaviour
 {
     [Header("Layers:")]
-    public SingleUnityLayer Player;
-    public SingleUnityLayer TriggerLevel;
+    public int Player;
+    public int TriggerLevel;
 }

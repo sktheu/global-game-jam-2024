@@ -5,6 +5,7 @@ using UnityEngine;
 public class FollowPlayer : MonoBehaviour
 {
     #region Variáveis Globais
+    // Unity Inspector
     [Header("Configurações:")]
     public bool CanFollow = true;
     [SerializeField] private Vector3 offset;

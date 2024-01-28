@@ -5,10 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/_Game/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/_Game/Scenes/GameScene.unity
     guid: 3e51b7e5a4c236b4da29ca011a69b488
+  - enabled: 1
+    path: Assets/_Game/Scenes/LizardHouse.unity
+    guid: 19deebff2491dcc459b7fb34db18c776
+  - enabled: 1
+    path: Assets/_Game/Scenes/CatHouse.unity
+    guid: a01bbd19de38f1545831f8e1b0112d3a
+  - enabled: 1
+    path: Assets/_Game/Scenes/FrogHouse.unity
+    guid: 6c85c2280e38a1d4ea62de6d0d49e317
   m_configObjects: {}
