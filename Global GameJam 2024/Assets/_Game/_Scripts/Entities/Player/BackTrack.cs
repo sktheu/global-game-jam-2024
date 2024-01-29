@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class BackTrack : MonoBehaviour
 {
     #region Variáveis Globais
-    // Referências
+    // Referências:
     private CollisionLayersManager _collisionLayersManager;
     
     private static int spawnPointIndex = 0;

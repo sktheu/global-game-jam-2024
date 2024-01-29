@@ -14,8 +14,11 @@ public class FishDanceBehaviour : MonoBehaviour
     [SerializeField] private Dialogue initialDialogue;
     [SerializeField] private Dialogue winDialogue;
 
+    [Header("Posição:")] 
+    [SerializeField] private Transform miniGamePoint;
+
     // Componentes:
-    private Animator _anim;
+    // private Animator _playerAnim;
     private PlayerMovement _playerMovement;
 
     private List<Dance.Moves> _curDanceMoves = new List<Dance.Moves>();
@@ -26,22 +29,25 @@ public class FishDanceBehaviour : MonoBehaviour
     #region Funções Unity
     private void Start()
     {
+        transform.position = miniGamePoint.position;
+
         if (_win)
         {
             winDialogue.enabled = true;
             this.enabled = false;
         }
 
-        _anim = GetComponent<Animator>();
-        _playerMovement = GetComponent<PlayerMovement>();
+        //_playerAnim = GetComponent<Animator>();
+        _playerMovement = FindObjectOfType<PlayerMovement>();
         _playerMovement.enabled = false;
-        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        GetComponent<SpriteRenderer>().flipX = false;
+        _playerMovement.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        _playerMovement.gameObject.GetComponent<SpriteRenderer>().flipX = false;
         ClearDance();
     }
 
     private void Update()
     {
+        // Input Dança
         if (Input.GetKeyDown(KeyCode.RightArrow))
             AddNewDanceMove(Dance.Moves.Right);
         else if (Input.GetKeyDown(KeyCode.LeftArrow))

@@ -22,11 +22,15 @@ public class Spawner : MonoBehaviour
     public bool spawnerSwitch = true;
 
     private static bool _win = false;
+
+    [SerializeField] private Transform miniGamePoint;
     #endregion
 
     #region Unity Functions
     private void Start()
     {
+        transform.position = miniGamePoint.position;
+
         if (_win)
         {
             winDialogue.enabled = true;

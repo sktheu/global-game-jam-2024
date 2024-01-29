@@ -27,10 +27,7 @@ public class Dialogue : MonoBehaviour
     #endregion
 
     #region Funções Unity
-    private void Awake()
-    {
-        _playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-    }
+    private void Awake() => _playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
 
     private void Start()
     {
@@ -90,7 +87,7 @@ public class Dialogue : MonoBehaviour
             tmp.enabled = false;
 
             _started = false;
-            nextScript.enabled = true;
+            if (nextScript != null) nextScript.enabled = true;
             this.enabled = false;
         }
     }
