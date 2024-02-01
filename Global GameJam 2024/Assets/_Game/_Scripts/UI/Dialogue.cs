@@ -10,16 +10,17 @@ public class Dialogue : MonoBehaviour
     #region Variáveis Globais
     // Unity Inspector:
     [Header("Configurações:")]
-    [SerializeField] private TextMeshProUGUI tmp;
     [SerializeField] private float typeInterval;
-    [SerializeField] private Image panelImg;
     [SerializeField] private float enableDistance;
-    [SerializeField] private MonoBehaviour nextScript;
+
+    [Header("Referências:")] 
+    [SerializeField] private TextMeshProUGUI tempText;
+    [SerializeField] private Image background;
 
     [Header("Diálogos:")]
     [SerializeField] private string[] lines;
+    [SerializeField] private NPCTrigger _npcTrigger;
 
-    // Referências:
     private static Transform _playerTransform;
 
     private int _dialogueIndex;
@@ -27,30 +28,27 @@ public class Dialogue : MonoBehaviour
     #endregion
 
     #region Funções Unity
-    private void Awake() => _playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+    private void Awake()
+    {
+        _playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+    }
 
     private void Start()
     {
-        panelImg.enabled = false;
-        tmp.enabled = false;
+        background.enabled = false;
+        tempText.enabled = false;
     }
 
     private void Update()
     {
-        if (_started)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-                NextLine();
-        }
-
         if (Vector3.Distance(transform.position, _playerTransform.position) <= enableDistance)
         {
             if (!_started)
             {
-                panelImg.enabled = true;
-                tmp.enabled = true;
+                background.enabled = true;
+                tempText.enabled = true;
 
-                tmp.text = String.Empty;
+                tempText.text = String.Empty;
                 StartDialogue();
 
                 _started = true;
@@ -58,10 +56,16 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
-            panelImg.enabled = false;
-            tmp.enabled = false;
+            background.enabled = false;
+            tempText.enabled = false;
 
             _started = false;
+        }
+
+        if (_started)
+        {
+            if (Input.GetButtonDown("Action"))
+                NextLine();
         }
     }
     #endregion
@@ -78,17 +82,16 @@ public class Dialogue : MonoBehaviour
         if (_dialogueIndex < lines.Length - 1)
         {
             _dialogueIndex++;
-            tmp.text = string.Empty;
+            tempText.text = string.Empty;
             StartCoroutine(TypeLine());
         }
         else
         {
-            panelImg.enabled = false;
-            tmp.enabled = false;
+            tempText.enabled = false;
+            background.enabled = false;
 
-            _started = false;
-            if (nextScript != null) nextScript.enabled = true;
-            this.enabled = false;
+            if (_npcTrigger != null)
+                _npcTrigger.ActivateMiniGame();
         }
     }
 
@@ -96,7 +99,7 @@ public class Dialogue : MonoBehaviour
     {
         foreach (char c in lines[_dialogueIndex].ToCharArray())
         {
-            tmp.text += c;
+            tempText.text += c;
             yield return new WaitForSeconds(typeInterval);
         }
     }
