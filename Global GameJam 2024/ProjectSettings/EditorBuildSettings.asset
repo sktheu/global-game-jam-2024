@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Game/Scenes/FrogHouse.unity
     guid: 6c85c2280e38a1d4ea62de6d0d49e317
+  - enabled: 1
+    path: Assets/_Game/Scenes/CatMiniGame.unity
+    guid: 90895973c82ef334db5bb65f9c444c12
   m_configObjects: {}

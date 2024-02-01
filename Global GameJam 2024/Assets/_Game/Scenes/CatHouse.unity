@@ -548,14 +548,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   typeInterval: 0.04
-  enableDistance: 2
+  enableDistance: 8
   tempText: {fileID: 1229551871}
   background: {fileID: 437880409}
+  _npcTrigger: {fileID: 1786824616}
+  _npcTransform: {fileID: 1786824614}
   lines:
-  - "Oi este \xE9 meu di\xE1logo inicial."
-  - "\xC9 muito bom te conhecer!"
-  - Estou precisando de ajuda em....
-  - "Vamos l\xE1!"
+  - Primeira
+  - Segunda
+  - Bora
+  - Vamo!
 --- !u!1 &1539904185
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,8 +775,9 @@ GameObject:
   - component: {fileID: 1786824614}
   - component: {fileID: 1786824613}
   - component: {fileID: 1786824615}
+  - component: {fileID: 1786824616}
   m_Layer: 0
-  m_Name: Gato
+  m_Name: Cat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -892,6 +895,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.87706184, y: 0.20163798}
   m_EdgeRadius: 0
+--- !u!114 &1786824616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786824612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1215dce7cedcf054cb7a8f710fe3edf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentNpc: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -16,10 +16,11 @@ public class Dialogue : MonoBehaviour
     [Header("Referências:")] 
     [SerializeField] private TextMeshProUGUI tempText;
     [SerializeField] private Image background;
+    [SerializeField] private NPCTrigger _npcTrigger;
+    [SerializeField] private Transform _npcTransform;
 
     [Header("Diálogos:")]
     [SerializeField] private string[] lines;
-    [SerializeField] private NPCTrigger _npcTrigger;
 
     private static Transform _playerTransform;
 
@@ -41,7 +42,7 @@ public class Dialogue : MonoBehaviour
 
     private void Update()
     {
-        if (Vector3.Distance(transform.position, _playerTransform.position) <= enableDistance)
+        if (Vector3.Distance(_npcTransform.position, _playerTransform.position) <= enableDistance)
         {
             if (!_started)
             {
@@ -64,7 +65,7 @@ public class Dialogue : MonoBehaviour
 
         if (_started)
         {
-            if (Input.GetButtonDown("Action"))
+            if (Input.GetKeyDown(KeyCode.Space))
                 NextLine();
         }
     }
