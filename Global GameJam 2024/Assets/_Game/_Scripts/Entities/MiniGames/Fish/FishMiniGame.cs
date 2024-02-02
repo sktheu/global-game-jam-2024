@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class FishMiniGame : MonoBehaviour
 {
-    [Header("Configurações:")] 
+    #region Variáveis Globais
+    [Header("Configurações:")]
     [SerializeField] private Moves[] targetDance;
     [SerializeField] private float movesInterval;
 
     private List<Moves> _curDance = new List<Moves>();
     private int _curMoveCount = 0;
     private enum Moves { Right, Left, Up, Down }
+    #endregion
 
+    #region Funções Unity
     private void Update()
     {
         if (_curMoveCount < targetDance.Length)
@@ -22,7 +25,9 @@ public class FishMiniGame : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
             Stop();
     }
+    #endregion
 
+    #region Funções Próprias
     private void GetDanceInput()
     {
         if (Input.GetKeyDown(KeyCode.D))
@@ -37,6 +42,7 @@ public class FishMiniGame : MonoBehaviour
 
     private void AddNewMove(Moves move)
     {
+        StopAllCoroutines();
         _curDance.Add(move);
         _curMoveCount++;
         StartCoroutine(SetMovesInterval(movesInterval));
@@ -44,6 +50,7 @@ public class FishMiniGame : MonoBehaviour
 
     private void VerifyDance()
     {
+        StopAllCoroutines();
         if (_curDance.Count > targetDance.Length)
             ClearDance();
 
@@ -77,4 +84,5 @@ public class FishMiniGame : MonoBehaviour
     {
         // TODO: Voltar a floresta
     }
+    #endregion
 }
