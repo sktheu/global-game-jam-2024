@@ -30,11 +30,12 @@ public class NPCTrigger : MonoBehaviour
 
             case NPC.Fish:
                 // Começar o minigame do peixe
+                SceneManager.LoadScene("FishMiniGame");
                 break;
 
             case NPC.Lizard:
                 // Ir para a fase do minigame de música
-                SceneManager.LoadScene("FishMiniGame");
+                
                 break;
         }
     }
